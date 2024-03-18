@@ -4,7 +4,7 @@ const PORT = 3000;
 
 // Define a route for the GET request
 app.get('/', (req, res) => {
-  res.status(200).send('Hello, this is a simple Node.js API! 2');
+  res.status(200).send('Hello, this is a simple Node.js API! 1');
 });
 
 // Start the server
