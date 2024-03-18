@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo no test specified",
+    "lint": "echo no linter specified",
     "start": "node app.js"
   },
   "author": "",
