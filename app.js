@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 80;
+const PORT = 3000;
 
 // Define a route for the GET request
 app.get('/', (req, res) => {
