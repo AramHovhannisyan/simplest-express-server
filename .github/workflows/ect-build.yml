@@ -46,7 +46,7 @@ jobs:
             touch ec2-aram.pem
             echo '${{ secrets.SSH_KEY }}' >> ec2-aram.pem
             chmod 400 ec2-aram.pem
-            scp -i ${{ secrets.SSH_KEY }} app.js ${{ secrets.USERNAME }}@${{ secrets.HOSTNAME }}:${{ secrets.TARGET_DIR }}
+            scp -i ec2-aram.pem node-start.sh ${{ secrets.USERNAME }}@${{ secrets.HOSTNAME }}:${{ secrets.TARGET_DIR }}
 
       # - name: Copy files to remote
       #   uses: appleboy/scp-action@master
