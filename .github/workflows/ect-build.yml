@@ -43,8 +43,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script:
-            touch ec2-aram.pem
-            echo '${{ secrets.SSH_KEY }}' >> ec2-aram.pem
+            sudo touch ec2-aram.pem
+            sudo echo '${{ secrets.SSH_KEY }}' >> ec2-aram.pem
             chmod 400 ec2-aram.pem
             scp -i ec2-aram.pem node-start.sh ${{ secrets.USERNAME }}@${{ secrets.HOSTNAME }}:${{ secrets.TARGET_DIR }}
 
