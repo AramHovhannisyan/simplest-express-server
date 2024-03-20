@@ -45,7 +45,7 @@ jobs:
           source: "./"
           target: ${{ secrets.TARGET_DIR }}
 
-      - name: restarting service
+      - name: Restarting service
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOSTNAME }}
