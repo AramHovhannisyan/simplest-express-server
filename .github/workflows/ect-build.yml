@@ -42,9 +42,8 @@ jobs:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          script:  |
-            whoami
-            sudo echo '${{ secrets.SSH_KEY }}' > ec2-aram.pem
+          script:
+            echo '${{ secrets.SSH_KEY }}' > ec2-aram.pem
             chmod 400 ec2-aram.pem
             scp -i ${{ secrets.SSH_KEY }} app.js ${{ secrets.USERNAME }}@${{ secrets.HOSTNAME }}:${{ secrets.TARGET_DIR }}
 
